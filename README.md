@@ -1,47 +1,52 @@
-QA Automation Project (Unit Tests + Selenium)
+Final Project – CanDrive Unit Tests & Selenium Login Test
 
-This project includes:
+This repository contains the solution for Part 1 of the final:
 
-Unit tests for the can_drive(age) function
+Unit tests for the can_drive(age) function (Python version).
 
-Selenium tests for the login page at:
-https://www.yourlearningpal.com/login
+Selenium UI tests for the login page at letsusedata.com
+(one successful login and one failed login).
+
+Files
+
+can_drive.py – implementation of can_drive(age) (returns True if age ≥ 16).
+
+test_can_drive.py – unit tests for can_drive(age) using Python unittest.
+
+test_login_selenium.py – Selenium tests for:
+
+successful login: test1 / Test12456
+
+failed login: test1 / test1234
+
+.gitignore – ignores .venv/, __pycache__/ and other non-essential files.
 
 Requirements
 
-Python 3
+Python 3 – to run the scripts.
 
-Google Chrome
+Google Chrome – Selenium opens this browser to perform UI tests.
+
+Selenium library – allows Python to control the browser.
+
+Install Selenium:
 
 pip install selenium
 
-(optional) virtual environment:
+Optional: Virtual Environment
+
+Used to isolate project dependencies so the project runs the same on any machine.
 
 python -m venv .venv
-source .venv/bin/activate     # macOS/Linux
+source .venv/bin/activate     # macOS / Linux
 .\.venv\Scripts\activate      # Windows
 
-▶ How to Run Unit Tests
+How to Run the Tests
+1. Run unit tests (CanDrive)
 python -m unittest test_can_drive.py
 
-▶ How to Run Selenium Tests
+2. Run Selenium login tests
 python -m unittest test_login_selenium.py
 
 
-Selenium will:
-
-open Chrome
-
-enter login and password
-
-click the “show password” icon (if available)
-
-test successful and failed login scenarios
-
-Notes
-
-Chrome is required because WebDriver uses it by default.
-
-.venv and __pycache__ are ignored through .gitignore.
-
-Add your demo appointment date/time inside test file comments (as required).
+Selenium will open Chrome, type the credentials, click the “show password” icon, and verify both successful and failed login scenarios.
