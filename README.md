@@ -1,33 +1,47 @@
-This project contains Python unit tests and Selenium UI tests.
+QA Automation Project (Unit Tests + Selenium)
 
-Included files:
+This project includes:
 
-can_drive.py – simple function that checks if a person can drive based on age
+Unit tests for the can_drive(age) function
 
-test_can_drive.py – unit tests for can_drive
+Selenium tests for the login page at:
+https://www.yourlearningpal.com/login
 
-test_login_selenium.py – Selenium tests for the login page on https://www.yourlearningpal.com/login
+Requirements
 
-Requirements:
-Python 3.10 or higher, Google Chrome, and the following packages:
+Python 3
 
-pip install selenium webdriver-manager
+Google Chrome
 
+pip install selenium
 
-How to run unit tests:
+(optional) virtual environment:
 
+python -m venv .venv
+source .venv/bin/activate     # macOS/Linux
+.\.venv\Scripts\activate      # Windows
+
+▶ How to Run Unit Tests
 python -m unittest test_can_drive.py
 
-
-How to run Selenium login tests:
-
+▶ How to Run Selenium Tests
 python -m unittest test_login_selenium.py
 
 
-Browser slow-motion mode can be enabled in test_login_selenium.py:
+Selenium will:
 
-DEBUG_SLOW = True
-DEBUG_DELAY = 1.0
+open Chrome
 
+enter login and password
 
-Set DEBUG_SLOW = False to run the tests at full speed.
+click the “show password” icon (if available)
+
+test successful and failed login scenarios
+
+Notes
+
+Chrome is required because WebDriver uses it by default.
+
+.venv and __pycache__ are ignored through .gitignore.
+
+Add your demo appointment date/time inside test file comments (as required).
