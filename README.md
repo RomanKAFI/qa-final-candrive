@@ -43,10 +43,10 @@ source .venv/bin/activate     # macOS / Linux
 
 How to Run the Tests
 1. Run unit tests (CanDrive)
-python -m unittest test_can_drive.py
+python3 test_can_drive.py
 
 2. Run Selenium login tests
-python -m unittest test_login_selenium.py
+python3 test_login_selenium.py
 
 
 Selenium will open Chrome, type the credentials, click the “show password” icon, and verify both successful and failed login scenarios.
