@@ -13,7 +13,7 @@ class TestCanDrive(unittest.TestCase):
 
     def test_over_16_can_drive(self):
         """Test: age above 16 should return True."""
-        self.assertTrue(can_drive(25))
+        self.assertTrue(can_drive(17))
 
     def test_zero_age_cannot_drive(self):
         """Test: age 0 should return False."""
